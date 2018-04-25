@@ -1,6 +1,6 @@
 require_relative 'decimal'
 
-module Finance
+module FinancialCalculator
   # the Transaction class provides a general interface for working with individual cash flows.
   # @api public
   class Transaction

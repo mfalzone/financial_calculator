@@ -1,6 +1,6 @@
 require_relative 'decimal'
 
-module Finance
+module FinancialCalculator
   # the Rate class provides an interface for working with interest rates.
   # {render:Rate#new}
   # @api public

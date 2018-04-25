@@ -6,3 +6,4 @@ Gemfile.lock
 *.swp
 .bundle
 .idea
+.vscode/

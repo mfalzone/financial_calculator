@@ -1,10 +1,10 @@
 require 'rake'
-require 'rake/testtask'
+require 'rake/clean'
+require 'rspec/core/rake_task'
+require 'bundler/gem_tasks'
 
-task :default => [:test_units]
+task default: :spec
 
-Rake::TestTask.new("test_units") do |t|
-  t.pattern = 'test/*.rb'
-  t.verbose = true
-  t.warning = true
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.fail_on_error = true
 end

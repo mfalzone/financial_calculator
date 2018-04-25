@@ -5,7 +5,7 @@ require 'bigdecimal'
 require 'bigdecimal/newton'
 include Newton
 
-module Finance
+module FinancialCalculator
   # Provides methods for working with cash flows (collections of transactions)
   # @api public
   module Cashflow
@@ -22,7 +22,7 @@ module Finance
 
       values.each do |key, value|
         define_method key do
-          BigDecimal.new value
+          BigDecimal(value)
         end
       end
 
@@ -33,7 +33,7 @@ module Finance
 
       def values(x)
         value = @transactions.send(@function, Flt::DecNum.new(x[0].to_s))
-        [ BigDecimal.new(value.to_s) ]
+        [ BigDecimal(value.to_s) ]
       end
     end
 
@@ -123,5 +123,5 @@ module Finance
 end
 
 class Array
-  include Finance::Cashflow
+  include FinancialCalculator::Cashflow
 end

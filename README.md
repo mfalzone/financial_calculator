@@ -1,32 +1,34 @@
 # FINANCE
+[![Build Status](https://travis-ci.org/mfalzone/financial_calculator.svg?branch=master)](https://travis-ci.org/mfalzone/financial_calculator)
+[![Coverage Status](https://coveralls.io/repos/github/mfalzone/financial_calculator/badge.svg?branch=master)](https://coveralls.io/github/mfalzone/financial_calculator?branch=master)
 
-a library for financial modelling in Ruby.
+A library for financial modelling in Ruby.
 
 ## INSTALL
 
-    $ sudo gem install finance
+    $ sudo gem install financial_calculator
 
 ## IMPORTANT CHANGES
 
-Contributions by [@thadd](https://github.com/thadd) and
-[@bramswenson](https://github.com/bramswenson) have made the `finance`
-library fully compatible with rails, at the cost of the `#years` and
-`#months` convenience methods on `Integer`, as well as the `#to_d` method for
-converting `Numerics` into `DecNums`.  These methods have been removed, due to
-conflicts with existing rails methods.
+This is a fork of the [finance](https://github.com/marksweston/finance) library.
+The fork was made at version 2.0 of the original library. The first release of
+this library will not introduce any feature changes, it will only update the tests
+and documentation.
 
-Correspondingly, `finance` has been bumped up to version 2.0.
+Since there are many additional calculations that can be included in this gem, I am
+working on developing a roadmap of which ones I will be adding and in what order. However,
+I am always willing to accept well tested pull requests for new features.
 
 ## OVERVIEW
 
 ### GETTING STARTED
 
-    >> require 'finance'
+    >> require 'financial_calculator'
 
-*Note:* As of version 1.0.0, the entire library is contained under the
-Finance namespace.  Existing code will not work unless you add:
+*Note:* The entire library is contained under the
+FinancialCalculator namespace.  Existing code will not work unless you add:
 
-    >> include Finance
+    >> include FinancialCalculator
 
 for all of the examples below, we'll assume that you have done this.
 
@@ -140,15 +142,15 @@ Currently implemented features include:
 
 ## RESOURCES
 
-* [RubyGems Page](https://rubygems.org/gems/finance)
-* [Source Code](http://github.com/wkranec/finance)
-* [Bug Tracker](https://github.com/wkranec/finance/issues)
-* [Google Group](http://groups.google.com/group/finance-gem/topics?pli=1)
+* [RubyGems Page](https://rubygems.org/gems/financial_calculator)
+* [Source Code](http://github.com/mfalzone/financial_calculator)
+* [Bug Tracker](https://github.com/mfalzone/financial_calculator/issues)
 
 ## COPYRIGHT
 
 This library is released under the terms of the LGPL license.
 
+Copyright (c) 2018, Mike Falzone.
 Copyright (c) 2011, William Kranec.
 All rights reserved.
 
