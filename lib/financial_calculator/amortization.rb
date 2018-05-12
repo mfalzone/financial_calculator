@@ -1,4 +1,3 @@
-require_relative 'decimal'
 require_relative 'transaction'
 
 module FinancialCalculator

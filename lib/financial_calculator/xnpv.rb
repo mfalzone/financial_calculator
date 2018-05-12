@@ -1,6 +1,3 @@
-
-    SECONDS_IN_YEAR = Flt::DecNum.new(365 * 86400) # TODO: Fix for leap years
-
 module FinancialCalculator
   # Calculate the net present value of a series of unequally spaced, (potentially) unequal cashflows
   class Xnpv

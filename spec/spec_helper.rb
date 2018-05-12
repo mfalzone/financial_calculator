@@ -4,7 +4,7 @@ require 'coveralls'
 # Coveralls.wear!
 SimpleCov.start do
   add_filter "/spec/"
-  minimum_coverage 99 
+  minimum_coverage 100
 end
 
 require 'minitest/autorun'
