@@ -28,7 +28,7 @@ module FinancialCalculator
     end
 
     def inspect
-      "NetPresentValue(#{result})"
+      "NPV(#{result})"
     end
 
     private

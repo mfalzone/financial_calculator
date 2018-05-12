@@ -46,7 +46,7 @@ module FinancialCalculator
     end
 
     def inspect
-      "PresentValue(#{result})"
+      "PV(#{result})"
     end
 
     # @return [Boolean] Whether the payments are made at the beginning of each period

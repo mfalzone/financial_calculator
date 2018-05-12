@@ -30,7 +30,8 @@ describe "Npv" do
   describe '#inspect' do
     subject { npv.inspect }
 
-    it { is_expected.to include 'NetPresentValue' }
+    it { is_expected.to be_a String }
+    it { is_expected.to include 'NPV' }
     it 'includes the result of the Npv calculation' do
       expect(subject).to include npv.result.to_s
     end

@@ -112,7 +112,8 @@ describe "Pv" do
 
     subject { present_value.inspect }
 
-    it { is_expected.to include 'PresentValue' }
+    it { is_expected.to be_a String }
+    it { is_expected.to include 'PV' }
     it 'includes the result of the present value calculation' do
       expect(subject).to include present_value.result.to_s
     end

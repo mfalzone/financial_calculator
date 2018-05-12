@@ -53,7 +53,7 @@ module FinancialCalculator
     # @return [String]
     # @api public
     def inspect
-      "Xirr(#{@result})"
+      "XIRR(#{@result})"
     end
 
     private

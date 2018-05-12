@@ -29,7 +29,7 @@ module FinancialCalculator
     end
 
     def inspect
-      "Irr(#{@result})"
+      "IRR(#{@result})"
     end
 
     private

@@ -35,8 +35,7 @@ describe "Irr" do
       subject { irr.inspect }
 
       it { is_expected.to be_a String }
-      it { is_expected.to include 'Irr' }
-
+      it { is_expected.to include 'IRR' }
       it 'includes the result of the calculation' do
         expect(subject).to include irr.result.to_s
       end
