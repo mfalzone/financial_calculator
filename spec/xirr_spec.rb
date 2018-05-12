@@ -34,7 +34,7 @@ describe "Xirr" do
   describe '#result' do
     subject { Xirr.new(flows, dates).result }
 
-    it { is_expected.to be_a DecNum }
+    it { is_expected.to be_a Flt::DecNum }
 
     context 'when all values are positive' do
       let(:flows) { [10, 20, 30, 40] }
@@ -64,6 +64,7 @@ describe "Xirr" do
     let(:xirr) { Xirr.new(flows, dates) }
     subject { xirr.inspect }
 
+    it { is_expected.to be_a String }
     it { is_expected.to include 'Xirr' }
 
     it 'includes the result of the calculation' do

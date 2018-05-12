@@ -8,8 +8,6 @@ require 'flt/d'
 #  * *principal* represents the outstanding balance of a loan or annuity.
 #  * *rate* represents the interest rate _per period_.
 module FinancialCalculator
-  include Flt
-
   require 'financial_calculator/amortization'
   require 'financial_calculator/rates'
   require 'financial_calculator/transaction'

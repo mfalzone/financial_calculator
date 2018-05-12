@@ -10,10 +10,7 @@ A library for financial modelling in Ruby.
 
 ## IMPORTANT CHANGES
 
-This is a fork of the [finance](https://github.com/marksweston/finance) library.
-The fork was made at version 2.0 of the original library. The first release of
-this library will not introduce any feature changes, it will only update the tests
-and documentation.
+This project started as a fork of the [finance](https://github.com/marksweston/finance) gem. The fork occured at version 2.0 of the finance library, and the first version of this gem is version 2.1. Version 2.1 is designed to be a drop in replacement for the finance gem, having only updated tests and documentation. However, starting with version 3.0, several significant changes have been made to the strucuture of the library as well as the underlying calculations.
 
 Since there are many additional calculations that can be included in this gem, I am
 working on developing a roadmap of which ones I will be adding and in what order. However,
@@ -109,25 +106,12 @@ You can also increase your payment to a specific amount:
 
     >> extra_payments_2 = 250000.amortize(rate){ -1500 }
 
-## ABOUT
-
-I started developing `finance` while analyzing mortgages as a personal
-project.  Spreadsheets have convenient formulas for doing this type of
-work, until you want to do something semi-complex (like ARMs or extra
-payments), at which point you need to create your own amortization
-table.  I thought I could create a better interface for this type of
-work in Ruby, and since I couldn't find an existing resource for these
-tools, I am hoping to save other folks some time by releasing what I
-have as a gem.
-
-More broadly, I believe there are many calculations that are necessary
-for the effective management of personal finances, but are difficult
-(or impossible) to do with spreadsheets or other existing open source
-tools.  My hope is that the `finance` library will grow to provide a set
-of open, tested tools to fill this gap.
-
-If you have used `finance` and find it useful, I would enjoy hearing
-about it!
+## SUPPORTED STANDARD CALCUALTIONS
+- PV
+- NPV
+- XNPV
+- IRR
+- XIRR
 
 ## FEATURES
 

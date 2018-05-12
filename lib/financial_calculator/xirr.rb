@@ -41,15 +41,17 @@ module FinancialCalculator
         raise ArgumentError.new('The cashflows do not converge') 
       end
       @eps = 1e-7
-      @cashflows = cashflows.map { |val| DecNum(val.to_s) }
+      @cashflows = cashflows.map { |val| Flt::DecNum(val.to_s) }
       @dates  = dates
 
-      r_1 = r_1 ? DecNum(r_1.to_s) : initial_r_1
-      r_2 = r_2 ? DecNum(r_2.to_s) : initial_r_2
+      r_1 = r_1 ? Flt::DecNum(r_1.to_s) : initial_r_1
+      r_2 = r_2 ? Flt::DecNum(r_2.to_s) : initial_r_2
 
       @result = solve(@cashflows, @dates, r_1, r_2)
     end
 
+    # @return [String]
+    # @api public
     def inspect
       "Xirr(#{@result})"
     end
@@ -86,7 +88,7 @@ module FinancialCalculator
     # Default first guess for use in the secant method
     # @see https://en.wikipedia.org/wiki/Internal_rate_of_return#Numerical_solution_for_single_outflow_and_multiple_inflows
     def initial_r_1
-      @initial_r_1 ||= cap_a_over_abs_cap_c_0 ** (2 / DecNum(@cashflows.length.to_s)) - 1
+      @initial_r_1 ||= cap_a_over_abs_cap_c_0 ** (2 / Flt::DecNum(@cashflows.length.to_s)) - 1
     end
 
     # Default second guess for use in the secant method
@@ -108,7 +110,7 @@ module FinancialCalculator
     end
 
     def p
-      DecNum(Math.log(cap_a_over_abs_cap_c_0).to_s) / DecNum(Math.log(cap_a / npv_1_in(initial_r_1)).to_s)
+      Flt::DecNum(Math.log(cap_a_over_abs_cap_c_0).to_s) / Flt::DecNum(Math.log(cap_a / npv_1_in(initial_r_1)).to_s)
     end
 
     def npv_1_in(rate)

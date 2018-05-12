@@ -12,10 +12,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - Monkey patched cashflow methods on Array
+- Fork relationship with Ruby [finance](https://github.com/marksweston/finance) gem
 
 ### Changed
 - Calculations for IRR
 - IRR, XIRR, NPV, and XNPV now belong to their own classes
+- Method for calculating IRR. The finance gem used Newton's method, this gem now uses the Secant method.
+- Significant changes now captured in README.md instead of HISTORY
 
 ## [2.1.0]
 ### Added

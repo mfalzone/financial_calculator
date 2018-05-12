@@ -5,7 +5,7 @@ module FinancialCalculator
     # @api public
     attr_reader :rate
 
-    # @return [Arrray<Numeric>] An array of cashflow amounts
+    # @return [Array<Numeric>] An array of cashflow amounts
     # @api public
     attr_reader :cashflows
 
@@ -46,8 +46,8 @@ module FinancialCalculator
       validate_cashflows_dates_size(cashflows, dates)
       validate_dates(dates)
 
-      @rate       = DecNum(rate.to_s)
-      @cashflows  = cashflows.map { |cashflow| DecNum(cashflow.to_s) }.freeze
+      @rate       = Flt::DecNum(rate.to_s)
+      @cashflows  = cashflows.map { |cashflow| Flt::DecNum(cashflow.to_s) }.freeze
       @dates      = dates.freeze
       @result     = solve(rate, cashflows, dates)
     end
@@ -72,7 +72,7 @@ module FinancialCalculator
       date_index    = 1
       
       transactions.reduce(0) do |total, transaction|
-        total += transaction[amount_index] / ((1 + @rate) ** (DecNum(transaction[date_index] - start) / 365)) 
+        total += transaction[amount_index] / ((1 + @rate) ** (Flt::DecNum(transaction[date_index] - start) / 365)) 
       end
     end
     

@@ -37,10 +37,10 @@ module FinancialCalculator
         raise ArgumentError.new('Cannot calculate present value with negative periods. Use future value instead.')
       end
 
-      @rate             = DecNum(rate.to_s)
-      @num_periods      = DecNum(num_periods.to_s)
-      @payment          = DecNum(payment.to_s)
-      @future_value     = DecNum(future_value.to_s)
+      @rate             = Flt::DecNum(rate.to_s)
+      @num_periods      = Flt::DecNum(num_periods.to_s)
+      @payment          = Flt::DecNum(payment.to_s)
+      @future_value     = Flt::DecNum(future_value.to_s)
       @pay_at_beginning = pay_at_beginning
       @result           = solve(@rate, @num_periods, @payment, @future_value, pay_at_beginning)
     end

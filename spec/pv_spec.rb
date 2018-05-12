@@ -121,6 +121,6 @@ describe "Pv" do
   describe '#result' do
     subject { present_value.result }
 
-    it {is_expected.to be_a DecNum }
+    it {is_expected.to be_a Flt::DecNum }
   end
 end

@@ -30,7 +30,7 @@ describe "Xnpv" do
   end
 
   it 'has a result property' do
-    expect(subject.result).to be_a DecNum
+    expect(subject.result).to be_a Flt::DecNum
   end
   
   context 'when dates and cashflows are not the same size' do

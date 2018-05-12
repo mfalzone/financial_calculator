@@ -24,6 +24,7 @@ SPEC = Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '>= 3.4.0'
   s.add_development_dependency 'simplecov', '>= 0.16.0'
+  s.add_development_dependency 'yard'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})

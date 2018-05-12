@@ -2,7 +2,7 @@ module FinancialCalculator
   class Irr
     # @return [Numeric] The internal rate of return 
     # @example
-    #   FinancialCalculator::Irr.new([-123400, 36200, 54800, 48100]).result.round(4) #=> DecNum('0.0596')
+    #   FinancialCalculator::Irr.new([-123400, 36200, 54800, 48100]).result.round(4) #=> Flt::DecNum('0.0596')
     attr_reader :result
 
     # The number of iterations to perform while attempting to minimize the root.
@@ -20,12 +20,16 @@ module FinancialCalculator
         raise ArgumentError.new('The values do not converge') 
       end
       @eps = 1e-7
-      @values = values.map { |val| DecNum(val.to_s) }
+      @values = values.map { |val| Flt::DecNum(val.to_s) }
 
       r_1 ||= initial_r_1
       r_2 ||= initial_r_2
 
       @result = solve(@values, r_1, r_2)
+    end
+
+    def inspect
+      "Irr(#{@result})"
     end
 
     private
@@ -60,7 +64,7 @@ module FinancialCalculator
     # Default first guess for use in the secant method
     # @see https://en.wikipedia.org/wiki/Internal_rate_of_return#Numerical_solution_for_single_outflow_and_multiple_inflows
     def initial_r_1
-      @initial_r_1 ||= cap_a_over_abs_cap_c_0 ** (2 / DecNum(@values.length.to_s)) - 1
+      @initial_r_1 ||= cap_a_over_abs_cap_c_0 ** (2 / Flt::DecNum(@values.length.to_s)) - 1
     end
 
     # Default second guess for use in the secant method
@@ -82,7 +86,7 @@ module FinancialCalculator
     end
 
     def p
-      DecNum(Math.log(cap_a_over_abs_cap_c_0).to_s) / DecNum(Math.log(cap_a / npv_1_in(initial_r_1)).to_s)
+      Flt::DecNum(Math.log(cap_a_over_abs_cap_c_0).to_s) / Flt::DecNum(Math.log(cap_a / npv_1_in(initial_r_1)).to_s)
     end
 
     def npv_1_in(rate)
