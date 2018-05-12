@@ -7,9 +7,6 @@ SimpleCov.start do
   minimum_coverage 100
 end
 
-require 'minitest/autorun'
-require 'minitest/spec'
-
 require 'active_support/all'
 
 require 'pry'

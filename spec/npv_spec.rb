@@ -2,7 +2,7 @@ require_relative 'spec_helper'
 
 describe "Npv" do
   let(:rate)      { 0.1 }
-  let(:cashflows)  { [10] * 4 }
+  let(:cashflows) { [10] * 4 }
   let(:npv)       { Npv.new(rate, cashflows) }
 
   subject { Npv.new(rate, cashflows) }

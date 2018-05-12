@@ -30,5 +30,5 @@ SPEC = Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.has_rdoc = true
-  s.extra_rdoc_files = ['README.md', 'COPYING', 'COPYING.LESSER', 'HISTORY']
+  s.extra_rdoc_files = ['README.md', 'COPYING', 'COPYING.LESSER', 'CHANGELOG.md']
 end
