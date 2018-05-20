@@ -1,10 +1,10 @@
 require_relative 'spec_helper'
 
-shared_examples_for 'it has invalid present value arguments' do
-  it 'raises an ArgumentError' do
-    expect { subject }.to raise_error ArgumentError
-  end
-end
+# shared_examples_for 'it has invalid arguments' do
+#   it 'raises an ArgumentError' do
+#     expect { subject }.to raise_error ArgumentError
+#   end
+# end
 
 describe "Pv" do
   let(:rate)              { 0.1 }
@@ -58,22 +58,22 @@ describe "Pv" do
 
   context 'when the number of periods is negative' do
     let(:num_periods) { -1 }
-    it_behaves_like 'it has invalid present value arguments'
+    it_behaves_like 'it has invalid arguments'
   end
 
   context 'when rate is non-numeric' do
     let(:rate) { 'string' }
-    it_behaves_like 'it has invalid present value arguments'
+    it_behaves_like 'it has invalid arguments'
   end
 
   context 'when num_periods is non-numeric' do
     let(:num_periods) { 'string' }
-    it_behaves_like 'it has invalid present value arguments'
+    it_behaves_like 'it has invalid arguments'
   end
 
   context 'when payment is non-numeric' do
     let(:payment) { 'string' }
-    it_behaves_like 'it has invalid present value arguments'
+    it_behaves_like 'it has invalid arguments'
   end
 
   context 'when future_values non-numeric' do
@@ -81,7 +81,7 @@ describe "Pv" do
     
     subject { Pv.new(rate, num_periods, payment, future_value) }
 
-    it_behaves_like 'it has invalid present value arguments'
+    it_behaves_like 'it has invalid arguments'
   end
 
   context 'when the number of periods is 0' do

@@ -107,11 +107,12 @@ You can also increase your payment to a specific amount:
     >> extra_payments_2 = 250000.amortize(rate){ -1500 }
 
 ## SUPPORTED STANDARD CALCUALTIONS
-- PV
-- NPV
-- XNPV
 - IRR
+- NPV
+- PMT
+- PV
 - XIRR
+- XNPV
 
 ## FEATURES
 

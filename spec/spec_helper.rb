@@ -22,3 +22,9 @@ shared_examples_for 'the values do not converge' do
     expect { subject }.to raise_error ArgumentError
   end
 end
+
+shared_examples_for 'it has invalid arguments' do
+  it 'raises an ArgumentError' do
+    expect { subject }.to raise_error ArgumentError
+  end
+end

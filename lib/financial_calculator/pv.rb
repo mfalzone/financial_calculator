@@ -1,6 +1,7 @@
 module FinancialCalculator
   # Calculate the future value of a series of equal of payments
   class Pv
+    include ::Validator
 
     # @return [Numeric] The discount rate used in the calculation
     attr_reader :rate
@@ -70,14 +71,6 @@ module FinancialCalculator
     def discount(amount, rate, periods)
       return 0 if amount.zero?
       amount / (1 + rate) ** periods 
-    end
-
-    def validate_numerics(numerics)
-      numerics.each do |key, value|
-        unless value.is_a? Numeric
-          raise ArgumentError.new("#{key} must be a type of Numeric. Got #{value.class} instead.")
-        end
-      end
     end
   end
 

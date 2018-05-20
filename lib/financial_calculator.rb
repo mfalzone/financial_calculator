@@ -8,6 +8,7 @@ require 'flt/d'
 #  * *principal* represents the outstanding balance of a loan or annuity.
 #  * *rate* represents the interest rate _per period_.
 module FinancialCalculator
+  require 'financial_calculator/validator'
   require 'financial_calculator/amortization'
   require 'financial_calculator/rates'
   require 'financial_calculator/transaction'
@@ -16,4 +17,5 @@ module FinancialCalculator
   require 'financial_calculator/npv'
   require 'financial_calculator/xnpv'
   require 'financial_calculator/xirr'
+  require 'financial_calculator/pmt'
 end
