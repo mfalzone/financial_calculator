@@ -12,10 +12,13 @@ module FinancialCalculator
   require 'financial_calculator/amortization'
   require 'financial_calculator/rates'
   require 'financial_calculator/transaction'
+  require 'financial_calculator/ipmt'
   require 'financial_calculator/irr'
+  require 'financial_calculator/ppmt'
   require 'financial_calculator/pv'
   require 'financial_calculator/npv'
   require 'financial_calculator/xnpv'
   require 'financial_calculator/xirr'
   require 'financial_calculator/pmt'
+  require 'financial_calculator/fv'
 end

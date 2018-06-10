@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.2.0] - 2018-06-09
+### Added
+- New class for FV, IPMT and PPMT calculations
+
+### Removed
+
+### Changed
+
 ## [3.1.0] - 2018-05-20
 ### Added
 - New class for PMT calculation (FinancialCalculator::Pmt)

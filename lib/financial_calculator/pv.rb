@@ -1,5 +1,5 @@
 module FinancialCalculator
-  # Calculate the future value of a series of equal of payments
+  # Calculate the present value of a series of equal of payments
   class Pv
     include ::Validator
 
@@ -61,7 +61,7 @@ module FinancialCalculator
       start_period  = pay_at_beginning ? 0 : 1
       end_period    = pay_at_beginning ? num_periods - 1 : num_periods
 
-      present_value = (start_period..end_period.abs).reduce(0) do |total, t|
+      present_value = (start_period..end_period.abs).reduce(Flt::DecNum('0')) do |total, t|
         total += discount(payment, rate, t)
       end
 
