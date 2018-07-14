@@ -1,4 +1,4 @@
-# FINANCE
+# FINANCIAL CALCULATOR
 [![Build Status](https://travis-ci.org/mfalzone/financial_calculator.svg?branch=master)](https://travis-ci.org/mfalzone/financial_calculator)
 [![Coverage Status](https://coveralls.io/repos/github/mfalzone/financial_calculator/badge.svg?branch=master)](https://coveralls.io/github/mfalzone/financial_calculator?branch=master)
 
