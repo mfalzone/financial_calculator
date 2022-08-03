@@ -18,7 +18,7 @@ SPEC = Gem::Specification.new do |s|
   s.add_dependency 'flt', '>=1.5.0'
 
   s.add_development_dependency 'activesupport', '>= 5.0.0'
-  s.add_development_dependency 'bundler', '~> 1.3'
+  s.add_development_dependency 'bundler', '>= 1.3'
   s.add_development_dependency 'coveralls_reborn', '>= 0.11.1'
   s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'rake'
